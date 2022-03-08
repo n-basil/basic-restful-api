@@ -1,5 +1,5 @@
 // Update with your config settings.
-
+require("dotenv").config();
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
@@ -7,7 +7,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://postgres:docker@localhost/lotr'
+    connection: process.env.CONNECTION_STRING,
   },
 
   staging: {
