@@ -21,7 +21,7 @@ an image of ERD for your DB Schema
 
 The Lord of the Rings RESTful API consists of three tables, which include character names, their weapons, and their respective races. These tables share information with one another, such as which character wields what weapon. We have built our functionality with a CRUDL mindset, so that our client could effectivly create, read, update, delete, and list our tables with ease.   
 
-![ERD Image](./erd.png)
+![ERD Image](./erd_image.png)
 
 ## Dependencies 
 
@@ -39,10 +39,10 @@ what ENV variables do they need to have set so that your DB connection in the kn
 
 ## Installation
 
-1- Clone the repo to your local server
-2- Navigate to the root directory for the project 
-3- Install the required dependencies
-4- Start the server
+1. Clone the repo to your local server 
+2. Navigate to the root directory for the project
+3. Install the required dependencies 
+4. Start the server 
 
 
 ## EndPoints
@@ -53,7 +53,7 @@ what ENV variables do they need to have set so that your DB connection in the kn
 Must contain: name *type string* <br>
 Optional: race_id *type int*, weapon_id *type int* <br>
 Example: `POST http://localhost:8080/characters` Response Body: {name: "Rhadaghast", race_id: 4, weapon_id: null} <br>
-<br>
+
 `POST /races` with raw JSON object (such as {race: "Ent"}) to create new race row <br>
 Must contain: name *type string* <br>
 Optional: N/A <br>
