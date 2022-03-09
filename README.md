@@ -42,14 +42,14 @@ Dotenv - Handles .ENV variables for security
 1. Clone the repo to your local server 
 2. Navigate to the root directory for the project
 3. Install the required dependencies 
-`npm i express morgan knex dotenv`
+<br> `npm i express morgan knex dotenv`
 4. Configure .ENV and knexfile.js
 5. Run latest migration 
-`npx knex migrate:latest`
+<br> `npx knex migrate:latest`
 6. Seed the database with initial data
-`npx knex seed:run`
+<br> `npx knex seed:run`
 7. Start the server 
-`node index.js`
+<br> `node index.js`
 
 
 ## EndPoints
