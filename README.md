@@ -35,7 +35,7 @@ Docker  - PostgreSQL Server
 
 Dotenv - Handles .ENV variables for security 
 * CONNECTION_STRING - server address for knexfile.js to connect to PostgreSQL Docker server
-* CONNECTION_STRING format: "postgres://USER_NAME:PASSWORD@localhost/DB_NAME" 
+<br> Format: "postgres://USER_NAME:PASSWORD@localhost/DB_NAME" 
 
 ## Installation
 
