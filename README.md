@@ -69,26 +69,26 @@ Dotenv - Handles .ENV variables for security
 ### READ
 
 `GET /{table}/{id}` to show a specific item from a desired table at a desired ID <br>
-**Must contain in URL:** table (characters, races, or weapons), ID
+**Must contain in URL:** table (characters, races, or weapons), ID <br>
 **Example:** `GET http://localhost:8080/characters/1` <br>
 
 ### UPDATE
 
 `PATCH /{table}/{id}` with query parameters to update a specific ID on a specific table  <br>
-**Must contain in URL:** table (characters, races, or weapons), ID
+**Must contain in URL:** table (characters, races, or weapons), ID <br>
 **Possible Parameters:** name *type string*, race_id *type int*, weapon_id *type int* <br>
 **Example:** `PATCH http://localhost:8080/characters/1?name=Aragorn` <br>
 
 ### DELETE
 
 `DELETE /characters/{table}` to remove a specific item row at a desired ID <br>
-**Must contain in URL:** table (characters, races, or weapons), ID
+**Must contain in URL:** table (characters, races, or weapons), ID <br>
 **Example:** `DELETE http://localhost:8080/characters/3` <br>
 
 ### LIST
 
 `GET /{table}` to show all of a specific item <br>
-**Must contain in URL:** table (characters, races, or weapons)
+**Must contain in URL:** table (characters, races, or weapons) <br>
 **Example:** `GET http://localhost:8080/characters` <br>
 
 
