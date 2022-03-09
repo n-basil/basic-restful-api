@@ -1,11 +1,5 @@
 # Lord of The Rings RESTful API
 
-A good README.md that explains
-what ENV variables a developer would need to create (i.e. via dotenv, etc.) for your app to work on their local machine.
-In other words, what ENV variables do they need to have set so that your DB connection in the knexfile.js works as it is written?
-what endpoints are available on your API
-an image of ERD for your DB Schema
-
 ## Table of Contents
 
 [1. Overview](#overview)
