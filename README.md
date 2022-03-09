@@ -68,53 +68,29 @@ Dotenv - Handles .ENV variables for security
 
 ### READ
 
-`GET /characters/{id}` to show a specific character at a desired ID <br>
+`GET /{table}/{id}` to show a specific item from a desired table at a desired ID <br>
+**Must contain in URL:** table (characters, races, or weapons), ID
 **Example:** `GET http://localhost:8080/characters/1` <br>
-
-`GET /races/id` to show a specific race at a desired ID <br>
-**Example:** `GET http://localhost:8080/races/2` <br>
-
-`GET /weapons/id` to show a specific weapon at a desired ID <br>
-**Example:** `GET http://localhost:8080/weapons/6` <br>
-
 
 ### UPDATE
 
-`PATCH /characters/id` with query parameters to update a specific  <br>
+`PATCH /{table}/{id}` with query parameters to update a specific ID on a specific table  <br>
+**Must contain in URL:** table (characters, races, or weapons), ID
 **Possible Parameters:** name *type string*, race_id *type int*, weapon_id *type int* <br>
 **Example:** `PATCH http://localhost:8080/characters/1?name=Aragorn` <br>
 
-`PATCH /races/id` with query parameters to update a specific race <br>
-Possible Parameters: name *type string* <br>
-**Example:** `PATCH http://localhost:8080/races/6?race=Ent` <br>
-
-`PATCH /weapons/id` with query parameters to update a specific weapon <br>
-**Possible Parameters:** name *type string*, weapon_type *type string*, character_id *type int* <br>
-**Example:** `PATCH http://localhost:8080/weapons/11?weapon=Grond` <br>
-
-
 ### DELETE
 
-`DELETE /characters/{id}` to remove a specific character row at a desired ID <br>
+`DELETE /characters/{table}` to remove a specific item row at a desired ID <br>
+**Must contain in URL:** table (characters, races, or weapons), ID
 **Example:** `DELETE http://localhost:8080/characters/3` <br>
-
-`DELETE /races/{id}` to remove a specific race row at a desired ID <br>
-**Example:** `DELETE http://localhost:8080/races/2` <br>
-
-`DELETE /weapons/{id}` to remove a specific weapon row at a desired ID <br>
-**Example:** `DELETE http://localhost:8080/weapons/8` <br>
-
 
 ### LIST
 
-`GET /characters` to show all characters <br>
+`GET /{table}` to show all of a specific item <br>
+**Must contain in URL:** table (characters, races, or weapons)
 **Example:** `GET http://localhost:8080/characters` <br>
 
-`GET /races` to show all races <br>
-**Example:** `GET http://localhost:8080/races` <br>
-
-`GET /weapons` to show all weapons <br>
-**Example:** `GET http://localhost:8080/weapons` <br>
 
 
 

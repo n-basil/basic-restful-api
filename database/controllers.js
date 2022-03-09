@@ -18,64 +18,28 @@ function addWeapon(nameToAdd, w_type, c_id, c_by) {
 
 // READ 
 
-function getSpecficCharacter(c_id) {
-  return knex.select("*").from('characters').where({id: c_id});  //knex('characters').where({id: c_id}).then
+function getSpecificItem(table, i_id) {
+  return knex.select('*').from(table).where({id: i_id})
 }
-
-function getSpecificRace(r_id) {
-  return knex.select("*").from('races').where({id: r_id})
-}
-
-function getSpecificWeapon(w_id) {
-  return knex.select('*').from('weapons').where({id: w_id})
-}
-
 
 // UPDATE
 
-function updateCharacter(c_id, params) {
-  return knex('characters').where({id: c_id}).update(params)
+function updateItem(table, i_id, params) {
+  return knex(table).where({id: i_id}).update(params)
 }
-
-function updateRace(r_id, params) {
-  return knex('races').where({id: r_id}).update(params)
-}
-
-function updateWeapon(w_id, params) {
-  return knex('weapons').where({id: w_id}).update(params)
-}
-
 
 // DELETE
 
-function deleteCharacter(c_id) {
-  return knex('characters').where({id: c_id}).del()
+function deleteItem(table, i_id) {
+  return knex(table).where({id: i_id}).del()
 }
-
-function deleteRace(r_id) {
-  return knex('races').where({id: r_id}).del()
-}
-
-function deleteWeapon(w_id) {
-  return knex('weapons').where({id: w_id}).del()
-}
-
 
 // LIST
 
-function getAllCharacters() {
-  return knex.select("*").from("characters");
+function getAll(input) {
+  return knex.select("*").from(input)
 }
 
-function getAllRaces() {
-  return knex.select("*").from("races");
-}
-
-function getAllWeapons() {
-  return knex.select("*").from("weapons");
-}
-
-module.exports = { getAllCharacters, getSpecficCharacter, addCharacter, updateCharacter, deleteCharacter,
-                   getAllRaces, getSpecificRace, addRace, updateRace, deleteRace,
-                   getAllWeapons, getSpecificWeapon, addWeapon, updateWeapon, deleteWeapon
+module.exports = { addCharacter, addRace, addWeapon,
+                   getAll, getSpecificItem, deleteItem, updateItem
 };
