@@ -29,20 +29,27 @@ Express - RESTful API
 
 Morgan  - Request details
 
-Knex    - 
+Knex    - SQL query builder for PostgreSQL
 
-Docker  - Server
+Docker  - PostgreSQL Server
 
-Dotenv - Security (need this info:
-what ENV variables do they need to have set so that your DB connection in the knexfile.js works as it is written?
-)
+Dotenv - Handles .ENV variables for security 
+⋅⋅⋅* CONNECTION_STRING - server address for knexfile.js to connect to PostgreSQL Docker server
+⋅⋅⋅* CONNECTION_STRING format: "postgres://USER_NAME:PASSWORD@localhost/DB_NAME" 
 
 ## Installation
 
 1. Clone the repo to your local server 
 2. Navigate to the root directory for the project
 3. Install the required dependencies 
-4. Start the server 
+⋅⋅⋅`npm i express morgan knex dotenv`
+4. Configure .ENV and knexfile.js
+5. Run latest migration 
+⋅⋅⋅`npx knex migrate:latest`
+6. Seed the database with initial data
+⋅⋅⋅`npx knex seed:run`
+7. Start the server 
+⋅⋅⋅`node index.js`
 
 
 ## EndPoints
