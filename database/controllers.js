@@ -15,6 +15,7 @@ function addWeapon(nameToAdd, w_type, c_id, c_by) {
   return knex('weapons').insert({name: nameToAdd, weapon_type: w_type, character_id: c_id, created_by: c_by})
 }
 
+
 // READ 
 
 function getSpecficCharacter(c_id) {
@@ -28,7 +29,6 @@ function getSpecificRace(r_id) {
 function getSpecificWeapon(w_id) {
   return knex.select('*').from('weapons').where({id: w_id})
 }
-
 
 
 // UPDATE
@@ -45,6 +45,7 @@ function updateWeapon(w_id, params) {
   return knex('weapons').where({id: w_id}).update(params)
 }
 
+
 // DELETE
 
 function deleteCharacter(c_id) {
@@ -58,6 +59,7 @@ function deleteRace(r_id) {
 function deleteWeapon(w_id) {
   return knex('weapons').where({id: w_id}).del()
 }
+
 
 // LIST
 
